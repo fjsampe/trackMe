@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  serverEVTC: 'http://localhost:3200/api-cf/v1', //Servidor general E-VTC
 };
 
 /*

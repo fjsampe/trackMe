@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="loginForm" action="#" id="login" (ngSubmit)="validateLogin()" novalidate>
+    <ion-list>
+        <ion-item>
+            <ion-label position="floating">Código Empresa</ion-label>
+            <ion-input type="text" name="codCompany" formControlName="codCompany"></ion-input>
+            <ion-icon name="checkmark-circle" slot="end" color="success" *ngIf="loginForm.get('codCompany').valid && loginForm.get('codCompany').dirty">
+            </ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input type="text" name="username" formControlName="username"></ion-input>
+        <ion-icon name="checkmark-circle" slot="end" color="success" *ngIf="loginForm.get('username').valid && loginForm.get('username').dirty">
+        </ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" name="password" formControlName="password"></ion-input>
+        <ion-icon name="checkmark-circle" slot="end" color="success" *ngIf="loginForm.get('password').valid && loginForm.get('password').dirty">
+        </ion-icon>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" expand="block" [disabled]="!loginForm.valid">
+            <ion-icon name="log-in" slot="start"></ion-icon>
+            Acceso con eMail
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  
+
+</ion-content>

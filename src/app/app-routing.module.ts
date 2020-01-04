@@ -11,10 +11,17 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  { 
+    path: 'requests', 
+    loadChildren: './requests/requests.module#RequestsModule', 
+    //canActivate: [LoginActivateGuard] 
+  },
+  { 
+    path: 'auth', 
+    loadChildren: './auth/auth.module#AuthModule', 
+    //canActivate: [LogoutActivateGuard] 
+  },
+  { path: 'profile', loadChildren: './users/users.module#UsersModule' }
 ];
 
 @NgModule({

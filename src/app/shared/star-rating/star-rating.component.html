@@ -1,0 +1,8 @@
+
+<ion-item>
+  <ion-label>Rating</ion-label>
+  <ion-icon name="star" *ngFor="let num of fill" (click)="changeStar(num)"></ion-icon>
+  <ion-icon *ngFor=" let num of empty" name="star-outline" (click)="changeStar(num)"></ion-icon>
+</ion-item> 
+
+

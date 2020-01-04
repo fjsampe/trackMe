@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Solicitudes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-item *ngFor="let req of requestsToShow">
+      <ion-thumbnail slot="start">
+        <img [src]= "req.car.image">
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">
+        <h4>SOLICITUD: {{req.id}}</h4>
+        <p>VEHICULO: {{req.car.id}}</p>
+        <p>FECHA: {{req.pickedTime | date:'dd/MM/yyyy hh:mm' }}</p>
+        <p>ESTADO:{{req.status}}</p>
+      </ion-label>
+      <ion-button slot="end" fill="clear" color="dark" (click)="showOptions(req)">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

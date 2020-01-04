@@ -3,7 +3,19 @@
     <ion-menu type="overlay">
       <ion-header>
         <ion-toolbar>
-          <ion-title>Menu</ion-title>
+          <ion-title *ngIf="is_logged===false">Menu</ion-title>
+
+          <ion-row justify-content-arround *ngIf="imageAvatar">
+
+            <ion-item>
+              <ion-avatar slot="start">
+                <img name="profile-pic" [src]="imageAvatar" *ngIf="imageAvatar" />
+              </ion-avatar>
+
+              <ion-label>{{name}}</ion-label>
+            </ion-item>
+          </ion-row>
+         
         </ion-toolbar>
       </ion-header>
       <ion-content>
