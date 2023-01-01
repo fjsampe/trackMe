@@ -27,7 +27,7 @@
     "@ionic-native/toast": "^5.15.1",
     "@ionic/angular": "^4.7.1",
     "@ionic/storage": "^2.2.0",
-    "@mapbox/mapbox-gl-directions": "^4.0.2",
+    "@mapbox/mapbox-gl-directions": "^4.1.1",
     "cordova-android": "8.1.0",
     "cordova-plugin-x-toast": "^2.7.2",
     "core-js": "^2.5.4",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.801.2",
-    "@angular-devkit/build-angular": "~0.801.2",
+    "@angular-devkit/build-angular": "~15.0.4",
     "@angular-devkit/core": "~8.1.2",
     "@angular-devkit/schematics": "~8.1.2",
     "@angular/cli": "~8.1.2",
